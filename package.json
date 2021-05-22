@@ -1,6 +1,6 @@
 {
-  "name": "Brendan's_Tetris_Clone",
-  "version": "1.0.0",
+  "name": "SnailDOStetris",
+  "version": "1.0.1",
   "description": "",
   "main": "main.js",
   "engines": {
@@ -19,6 +19,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.heroku.com/tetrisclone.git"
+    "url": "https://github.com/snaildos/tetris"
   }
 }

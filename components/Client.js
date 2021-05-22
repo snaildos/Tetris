@@ -11,6 +11,7 @@ class Client {
 			nextPieceMatrix: [],
 			level: 0,
 			score: 0,
+			version: 1,
 			linesCleared: 0,
 			pauseStatus: false,
 		}

@@ -9,7 +9,7 @@ function gameRoom (io, socket) {
 
 			console.log('Creating Session')
 
-			const session = createSession(generateRandomId()); //could also just use socket id?
+			const session = createSession(generateRandomId());
 			session.join(client);
 
 			client.send({

@@ -17,6 +17,7 @@ span {
 	flex-direction: column;
 }
 
+
 #flex-container-localRow {
 	z-index: 10;
 	height: 100%;
@@ -59,6 +60,10 @@ span {
 	justify-content: center;
 }
 
+.hidden  {
+	text-indent: 100%;
+}
+
 .controls p {
 	font-size: 1em;	
 	margin: 0;
@@ -70,7 +75,7 @@ span {
 }
 
 .logoFlexBox {
-	height: 30%;
+	height: 20%;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -79,11 +84,11 @@ span {
 }
 
 .tetrisLogo {
-	width:80%;
+	width:70%;
 }
 
 .quitButtonContainer {
-	height: 10%;
+	height: 20%;
 }
 
 .quitButton {
@@ -125,7 +130,23 @@ span {
 
 #chatBox {
 	height: 100%;
-	width: 33%;
+	width: 30%;
+}
+
+#wrap { width: 600px; height: 390px; padding: 0; overflow: hidden; }
+#frame { width: 800px; height: 520px; border: 1px solid black; }
+#frame {
+	-ms-zoom: 0.75;
+	-moz-transform: scale(0.1);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(0.75);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(0.75);
+	-webkit-transform-origin: 0 0;
+}
+
+#ctrlbox  {
+
 }
 
 

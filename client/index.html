@@ -12,14 +12,14 @@
 		</div>
 		<div id="menuContainer"></div>
 		<div id="newRoomContainer">
-			<a href="/room" class="action-button shadow">Create New Room</a>
+			<a href="/room" class="action-button shadow">Create a server!</a>
 		</div>
 
 		<script>
 			const menuContainer = document.getElementById('menuContainer'); 
 			window.addEventListener('load', getMenuData)
 
-			const updateChecker = setInterval(getMenuData, 1000)
+			const updateChecker = setInterval(getMenuData, 2000)
 
 			function getMenuData(event) {
 				var req = new XMLHttpRequest();
@@ -50,7 +50,7 @@
 				if(array.length) {
 					for (let i = 0; i < array.length; i++) {
 						const link = array[i].pop >= 5 
-														? `<p class="full-button">ROOM FULL</p>` 
+														? `<p class="full-button">The room is FULL.</p>` 
 														: `<a class="join-button" href="/room#${array[i].room}">JOIN</a>`
 						const room =
 									 `<div class="roomContainer">
@@ -68,7 +68,7 @@
 					}
 				} else {
 					//create single div showing no rooms available
-					content=`<div class='roomContainer'>NO ACTIVE ROOMS</div>`
+					content=`<div class='roomContainer'>No generated servers found, please, create one.</div>`
 				}
 				menuContainer.innerHTML = content;
 			}
