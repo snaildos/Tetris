@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tetis!</title>
+	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="room.css">
+
+</head>
+<body>
+
+	<div class="flex-container-rows">
+		<div id="flex-container-localRow">
+			<div class="textBox-left">
+				<div class="logoFlexBox">
+					<img class="tetrisLogo" src="media/logo.png">
+				</div>
+				<div class="controls">
+					<h2>Controls</h2>
+					<p><span>Left: </span>'a'</p>
+					<p><span>Right: </span>'d'</p>
+					<p><span>Down: </span>'s'</p>
+					<p><span>Drop: </span>'Space bar'</p>
+					<p><span>Clock: </span>'e'</p>
+					<p><span>Ani-Clockwise: </span>'q'</p>
+					<p><span>Pause: </span>'p'</p>
+				</div>
+				<div class="quitButtonContainer">
+					<a class="quitButton" href="/">Return to main menu</a>
+				</div>
+			</div>
+			<div id="localContainer" class="mainGame"></div>
+			<div id="chatBox"></div>
+		</div>
+		<div id="flex-container-remoteRow">
+			<div id="remoteContainer" class="remoteGames"></div>
+		</div>
+	</div>
+
+	<template id="player-template">
+		<div class="player game">
+			<canvas class="gameCanvas"></canvas>
+		</div>
+	</template>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="utilities/utilities.js"></script>
+	<script type="text/javascript" src="components/ConnectionManager.js"></script>
+	<script type="text/javascript" src="components/EventHandler.js"></script>
+	<script type="text/javascript" src="components/Piece.js"></script>
+	<script type="text/javascript" src="components/Board.js"></script>
+	<script type="text/javascript" src="components/Player.js"></script>
+	<script type="text/javascript" src="components/Game.js"></script>
+	<script type="text/javascript" src="components/Manager.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

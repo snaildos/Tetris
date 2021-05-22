@@ -1,0 +1,168 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: black;
+	font-family: 'Audiowide', cursive;
+
+}
+
+span {
+	display: inline;
+}
+
+.flex-container-rows {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#flex-container-localRow {
+	z-index: 10;
+	height: 100%;
+	width:100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.textBox-left {
+	height: 95%;
+	width: 33%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;	
+}
+
+.controls {
+	height: 50%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	/*flex-grow: 2;*/
+	color: #FFEC92;
+	font-size: 1.3rem;
+}
+
+.controls h2 {
+	margin: 5px 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.controls p {
+	font-size: 1em;	
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.logoFlexBox {
+	height: 30%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.tetrisLogo {
+	width:80%;
+}
+
+.quitButtonContainer {
+	height: 10%;
+}
+
+.quitButton {
+	position: relative;
+	padding: 8px 30px;
+	margin: 0px 8px 8px 0px;
+	float: left;
+	border-radius: 10px;
+	font-size: 25px;
+	color: #FFF;
+	text-decoration: none;	
+	/*background-color: #F2CF66;
+	border-bottom: 5px solid #D1B358;
+	text-shadow: 0px -2px #D1B358;*/
+	background-color: #F0BB18;
+	border-bottom: 5px solid #B99116;
+	text-shadow: 0px -2px #B99116;
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.quitButton:active {
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+
+.mainGame {
+	height: 95%;
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	background-color: rgba(84, 84, 255, .2);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);	
+}
+
+#chatBox {
+	height: 100%;
+	width: 33%;
+}
+
+
+#flex-container-remoteRow {
+	height:100%;
+	width:100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;	
+}
+
+#remoteContainer {
+	height: 95%;
+	width: 98%;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	align-items: center;
+	justify-content: space-around;
+	border-radius: 5px;
+	background-color: rgba(84, 84, 255, .35);
+	box-shadow: inset 0px 0px 19px -1px rgba(0,0,0,0.4);			
+}
+
+#localContainer .gameCanvas {
+	border: 3px solid yellow;
+}
+
+#remoteContainer .gameCanvas {
+	height: 100%;
+	display: block;
+	margin: auto;
+	border: 5px solid black;
+}
+
+.player {
+
+}

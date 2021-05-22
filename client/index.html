@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Tetris Online</title>
+		<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+		<link rel="stylesheet" href="index.css">	
+	</head>
+	<body>
+		<div id="logoFlexBox">
+			<img id="tetrisLogo" src="media/logo.png">
+		</div>
+		<div id="menuContainer"></div>
+		<div id="newRoomContainer">
+			<a href="/room" class="action-button shadow">Create New Room</a>
+		</div>
+
+		<script>
+			const menuContainer = document.getElementById('menuContainer'); 
+			window.addEventListener('load', getMenuData)
+
+			const updateChecker = setInterval(getMenuData, 1000)
+
+			function getMenuData(event) {
+				var req = new XMLHttpRequest();
+				req.open('GET', '/menu-update', true);
+
+				req.onload = function() {
+				  if (req.status >= 200 && req.status < 400) {
+				    // Success!
+				    var data = JSON.parse(req.responseText);
+				    //Generate innerHTML of menuContainer div to represent selectable rooms
+				    updateMenu(data)
+
+				  } else {
+				    // We reached our target server, but it returned an error
+
+				  }
+				};
+
+				req.onerror = function() {
+				  // There was a connection error of some sort
+				};
+
+				req.send();		
+			}
+
+			function updateMenu(array = []) {
+				let content = '';
+				if(array.length) {
+					for (let i = 0; i < array.length; i++) {
+						const link = array[i].pop >= 5 
+														? `<p class="full-button">ROOM FULL</p>` 
+														: `<a class="join-button" href="/room#${array[i].room}">JOIN</a>`
+						const room =
+									 `<div class="roomContainer">
+										<div class="roomName">
+											${array[i].room}
+										</div>
+										<div class="roomPop">
+											${array[i].pop} / 5
+										</div>
+										<div class="roomLink">
+											${link}
+										</div>
+									</div>`;
+						content += room
+					}
+				} else {
+					//create single div showing no rooms available
+					content=`<div class='roomContainer'>NO ACTIVE ROOMS</div>`
+				}
+				menuContainer.innerHTML = content;
+			}
+
+		</script>
+	</body>
+</html>
