@@ -14,7 +14,7 @@ class Manager {
 
 		const TILESIZE = 20;
 		const BOARD_WIDTH = 12;
-		const BOARD_HEIGHT = 20;
+		const BOARD_HEIGHT = 22;
 
 		const COLOR_SCHEMES = [
 			{
@@ -78,9 +78,9 @@ class Manager {
 		}
 	}
 
-	// sortPlayers(players) {
-	// 	players.forEach(player => {
-	// 		this.canvasContainer.appendChild(player.element)
-	// 	})
-	// }
+	 sortPlayers(players) {
+	 	players.forEach(player => {
+	 		this.canvasContainer.appendChild(player.element)
+	 	})
+	 }
 }

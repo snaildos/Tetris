@@ -47,7 +47,7 @@ span {
 	align-items: center;
 	justify-content: flex-start;
 	/*flex-grow: 2;*/
-	color: #FFEC92;
+	color: rgb(255, 255, 255);
 	font-size: 1.3rem;
 }
 
@@ -169,7 +169,7 @@ span {
 	align-items: center;
 	justify-content: space-around;
 	border-radius: 5px;
-	background-color: rgba(84, 84, 255, .35);
+	background-color: black
 	box-shadow: inset 0px 0px 19px -1px rgba(0,0,0,0.4);			
 }
 

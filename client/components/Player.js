@@ -2,7 +2,7 @@ class Player {
 	constructor(props){
 		this.ctx = props.ctx;
 		this.eventHandler = new EventHandler();		
-		this.score = 0;
+		this.score = 1;
 		this.linesCleared = 0;
 		this.lastClearHeight = 0;
 		this.level = 0;
@@ -16,13 +16,6 @@ class Player {
 		this.nextPiece.pos.y = 1;
 	}
 
-	//########################################
-	//I'm adding in the less randomized grab bag. I should have built this into a piece handling class from the get go so this is dirty. 
-	//Don't want to deal with it now.
-	//Will need to refactor if I keep using this code much longer.
-
-	//This creates a grabbag of 4 copies of each type of piee. Once the bag is depleted a new one is generated. Guaranteeing better
-	//piece distribution.
 	generatePieceBag() {
 		const pieceTypes = 'TLJSZOI';
 		let grabBag = [];

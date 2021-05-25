@@ -4,7 +4,7 @@ function drawMatrix(
 	position, 
 	blockSize, 
 	colorScheme = {
-		pieces: ['red', 'blue', 'purple', 'pink','orange', 'indigo', 'green'],
+		pieces: ['red', 'blue', 'purple', 'pink','orange', 'indigo', 'green', 'cyan'],
 		outline: 'black',
 	}
 )

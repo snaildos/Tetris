@@ -18,6 +18,7 @@ const playerKeys = [
 		rotateClock: 69,
 		rotateCount: 81,
 		pause: 80,
+		w: 87,
 	}
 ]
 
@@ -49,6 +50,9 @@ function handleKeydown(event) {
 			} else if (event.keyCode === key.pause) {
 				//'p' for pause
 				playerLocal.pause();
+			} else if (event.keyCode === key.w) {
+				//'w' for rotate counter-clockwise
+				player.rotatePiece(1)
 			}
 		}
 	})
