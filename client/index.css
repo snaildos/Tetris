@@ -8,6 +8,40 @@ html, body {
 	background: black;
 }
 
+#cookie{
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(167, 23, 23); /* Fallback color */
+  }
+	  #cookie-wrapper{
+		  display: flex;
+		  flex-direction: row;
+		  padding: .6rem 0;
+	  }
+  
+		  #cookie-content{
+			  border-right: 1px solid #1e67af;
+		  }
+  
+		  #cookie-ok{
+			  border: 0;
+			  background: none;
+			  color: rgb(255, 0, 212);
+		  }
+
+.centerbruh  {
+	margin: auto;
+	width: 100%;
+	padding: 1px;
+}
+
 #logoFlexBox {
 	height: 20%;
 	width: 100%;

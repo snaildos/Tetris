@@ -114,6 +114,8 @@ span {
 	border-bottom: 1px solid;
 }
 
+body { overflow: hidden; /* Hide scrollbars */ }
+
 .mainGame {
 	height: 95%;
 	width: 40%;

@@ -4,10 +4,51 @@
 	<title>Tetis!</title>
 	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="room.css">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<script>
 
+		function sleep(ms) {
+		  return new Promise(resolve => setTimeout(resolve, ms));
+		}
+		
+		
+							// music
+							(function($){
+						  $(document).ready(async function() {
+						  
+						  var music = localStorage.getItem('music');
+						  
+						  if(music != 'false'){
+							var x = document.getElementById("myAudio"); 
+							await sleep(1000);
+							Audio.prototype.play = (function(play) {
+return function () {
+  var audio = this,
+      args = arguments,
+      promise = play.apply(audio, args);
+  if (promise !== undefined) {
+    promise.catch(_ => {
+      // Autoplay was prevented. This is optional, but add a button to start playing.
+      var el = document.createElement("button");
+      el.innerHTML = "Play";
+      el.addEventListener("click", function(){play.apply(audio, args);});
+      this.parentNode.insertBefore(el, this.nextSibling)
+    });
+  }
+};
+})(Audio.prototype.play);
+
+// Try automatically playing our audio via script. This would normally trigger and error.
+document.getElementById('MyAudioElement').play()
+						  }
+				
+						  
+						  });
+						  })(jQuery);
+						  </script>
 	<div class="flex-container-rows">
 		<div id="flex-container-localRow">
 			<div class="textBox-left">
@@ -25,6 +66,12 @@
 					<p><span>Pause: </span>'p'</p>
 					<p><spam>Server Version: 0.2</spam></p>
 				</div>
+				<!-- HTML -->
+<audio id="MyAudioElement" loop>
+	<source src="./media/tetis.mp3" type="audio/wav">
+	<source src="./media/tetis.mp3" type="audio/mp3">
+	Your browser does not support the audio element.
+  </audio>
 				<p></p>
 				<h1 class="hidden"></h1>
 				<div class="quitButtonContainer">
