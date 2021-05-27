@@ -1,7 +1,5 @@
 html, body {
 	height: 100%;
-	margin: 0;
-	padding: 0;
 	background: black;
 	font-family: 'Audiowide', cursive;
 
@@ -160,6 +158,18 @@ span {
 	justify-content: space-around;	
 }
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 #remoteContainer {
 	height: 95%;
 	width: 98%;
@@ -170,6 +180,11 @@ span {
 	justify-content: space-around;
 	border-radius: 5px;
 	background-color: black
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 	box-shadow: inset 0px 0px 19px -1px rgba(0,0,0,0.4);			
 }
 

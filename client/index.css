@@ -5,7 +5,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Audiowide', cursive;
-	background: whitesmoke;
+	background: black;
 }
 
 #logoFlexBox {
@@ -28,7 +28,7 @@ html, body {
 	margin: auto;
 	overflow-y: scroll;
 	background-color: rgba(198,198,233, 0.4);
-	color: #333;
+	color: white;
 	font-size: 25px;
 	border: 5px solid rgba(198,198,233, 0.2);
 	border-radius: 5px;
@@ -37,6 +37,10 @@ html, body {
 
 #menuContainer::-webkit-scrollbar {
     width: 1em;
+}
+
+.white  {
+	color: white;
 }
  
 #menuContainer::-webkit-scrollbar-track {
