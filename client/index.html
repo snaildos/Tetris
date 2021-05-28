@@ -11,6 +11,9 @@
 		<link rel="stylesheet" href="index.css">
 		<script data-ad-client="ca-pub-9441140070446957" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<script>
+		function single()  {
+			window.location.href = "singlegame.html";
+		}
 		function settings()  {
 			window.location.href = "settings.html";
 		}
@@ -47,15 +50,18 @@ alert("You are trying to connect to a service that only works on PC. Pressing OK
 			<img id="tetrisLogo" src="media/logo.png">
 		</div>
 		<button class="w3-center w3-button w3-white centerbruh" onclick="settings()"><h1 class="w3-center">Settings</h1></button>
-		<div id="menuContainer"></div>
+		<p>
+		</p>
+		<div id="menuContainer">
+		</div>
 		<div id="newRoomContainer">
 			<a href="/room" class="action-button shadow">Create a server!</a>
 			<p></p>
-			<p class="white">Server Version is currently: 0.2</p>
+			<p class="white">Server Version is currently: 0.3</p>
 
 		<div id="cookie">
 			<div id="cookie-wrapper">
-			  <div id="cookie-content" class="h1">Welcome too Tetris! <p>There is a settings button after starting the game, you can enable music, addons and more.</p>Hit START to start playing!</div>
+			  <div id="cookie-content" class="h1">Welcome to Tetris! <p>There is a settings button after starting the game, you can enable music, addons and more.</p>Hit START to start playing!</div>
 				<button id="cookie-ok"><h1>Start!</h1></button>
 			</div>
 		</div>
@@ -108,12 +114,12 @@ alert("You are trying to connect to a service that only works on PC. Pressing OK
 										<div class="roomLink">
 											${link}
 										</div>
-									</div>`;
+									</div><button class="w3-button w3-center w3-white" onclick="single()">Start SinglePlayer</button>`;
 						content += room
 					}
 				} else {
 					//create single div showing no rooms available
-					content=`<div class='roomContainer'>No generated servers found, please, create one.</div>`
+					content=`<div class='roomContainer'>No generated servers found, please, create one.</div><button class="w3-button w3-center w3-white" onclick="single()">Single Player</button>`
 				}
 				menuContainer.innerHTML = content;
 			}
