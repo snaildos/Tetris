@@ -1,0 +1,11 @@
+{
+  "name": "Tetis",
+  "description": "SnailDOS tetris remake. Multiplayer tetris out of the box!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Tetis",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

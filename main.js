@@ -104,6 +104,7 @@ function createClient(socket, id = generateRandomId()) {
 	return new Client(socket, id);
 }
 
+
 function broadcastSession(session) {
 	//extract all clients into new array using spread operator
 	const clients = [...session.clients] || []; //To avoid server crash if there are no clients

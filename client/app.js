@@ -57,15 +57,3 @@ function handleKeydown(event) {
 		}
 	})
 }
-
-//TODO: improve wall kick handling (sometimes it kicks the piece two squares over without even rotating)
-
-//Is there a way to prerender canvases to return snapshots of the other players score?
-//That would be way easier than rendering two more canvases concurrently
-
-//TODO: Add Menu Screen (Homepage)
-//		-Users can see open rooms
-//		-can join a room or create a new one
-//		-when they join/create, they are prompted to enter a username
-//TODO: Add in User name display in game screen
-//TODO: Build chat box

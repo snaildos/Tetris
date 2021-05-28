@@ -37,8 +37,6 @@ class Player {
 		const piece = new Piece(this.board, this.pieceBag.splice(0,1).join(''))
 		return piece;
 	}
-	//##########################################
-
 	movePiece(direction) {
 		this.activePiece.pos.x += direction;
 		if(this.checkBoardCollision()){
