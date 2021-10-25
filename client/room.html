@@ -23,7 +23,7 @@
 						  
 						  if(music != 'false'){
 							var x = document.getElementById("myAudio"); 
-							await sleep(1000);
+							await sleep(2000);
 							Audio.prototype.play = (function(play) {
 return function () {
   var audio = this,
@@ -57,14 +57,14 @@ document.getElementById('MyAudioElement').play()
 				</div>
 				<div class="controls">
 					<h2>Controls</h2>
-					<p><span>Left: </span>'a'</p>
-					<p><span>Right: </span>'d'</p>
-					<p><span>Down: </span>'s'</p>
+					<p><span>Left: </span>'A'</p>
+					<p><span>Right: </span>'D'</p>
+					<p><span>Down: </span>'S'</p>
 					<p><span>Drop: </span>'Space bar'</p>
-					<p><span>Clock: </span>'e'</p>
-					<p><span>Rotate: </span>'w'</p>
-					<p><span>Pause: </span>'p'</p>
-					<p><spam>Server Version: 0.3</spam></p>
+					<p><span>Clock: </span>'E'</p>
+					<p><span>Rotate: </span>'W'</p>
+					<p><span>Pause: </span>'P'</p>
+					<p><spam>Server Version: 3.5.2</spam></p>
 				</div>
 				<!-- HTML -->
 <audio id="MyAudioElement" loop>
@@ -80,7 +80,7 @@ document.getElementById('MyAudioElement').play()
 			</div>
 			<div id="localContainer" class="mainGame"></div>
 			<div id="chatBox">
-				<iframe src="https://galaxyhassocks.herokuapp.com/tetris.html" title="Chat" width="100%" height="97%" style="border:none;"></iframe>
+				<iframe src="https://snailchat-app.herokuapp.com/tetris.html" title="Chat" width="100%" height="97%" style="border:none;"></iframe>
 			</div>
 		</div>
 		<div id="flex-container-remoteRow">

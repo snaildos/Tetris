@@ -123,9 +123,7 @@ body { overflow: hidden; /* Hide scrollbars */ }
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	border-radius: 5px;
-	background-color: rgba(84, 84, 255, .2);
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);	
+	border-radius: 5px	
 }
 
 #chatBox {
