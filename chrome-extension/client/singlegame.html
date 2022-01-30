@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		//singleplayer only
+		var url = window.location.href
+		var curr = /[https://tetris.snaildos.com/single.html#singleplayer]/;
+		var br = 1
+		var last = url + '#singleplayer'
+		if (url == curr) {
+      console.log("Sucess!")
+} else if (url != 1) {
+	window.location.href = last;
+} 
+	</script>
+	<title>Tetis! - SinglePlayer</title>
+	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="room.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<script>
+
+		function sleep(ms) {
+		  return new Promise(resolve => setTimeout(resolve, ms));
+		}
+		
+		
+							// music
+							(function($){
+						  $(document).ready(async function() {
+						  
+						  var music = localStorage.getItem('music');
+						  
+						  if(music != 'false'){
+							var x = document.getElementById("myAudio"); 
+							await sleep(1000);
+							Audio.prototype.play = (function(play) {
+return function () {
+  var audio = this,
+      args = arguments,
+      promise = play.apply(audio, args);
+  if (promise !== undefined) {
+    promise.catch(_ => {
+      // Autoplay was prevented. This is optional, but add a button to start playing.
+      var el = document.createElement("button");
+      el.innerHTML = "Play";
+      el.addEventListener("click", function(){play.apply(audio, args);});
+      this.parentNode.insertBefore(el, this.nextSibling)
+    });
+  }
+};
+})(Audio.prototype.play);
+
+// Try automatically playing our audio via script. This would normally trigger and error.
+document.getElementById('MyAudioElement').play()
+						  }
+				
+						  
+						  });
+						  })(jQuery);
+						  </script>
+	<div class="flex-container-rows">
+		<div id="flex-container-localRow">
+			<div class="textBox-left">
+				<div class="logoFlexBox">
+					<img class="tetrisLogo" src="media/logo.png">
+				</div>
+				<div class="controls">
+					<h2>Controls</h2>
+					<p><span>Left: </span>'A'</p>
+					<p><span>Right: </span>'D'</p>
+					<p><span>Down: </span>'S'</p>
+					<p><span>Drop: </span>'Space bar'</p>
+					<p><span>Clock: </span>'E'</p>
+					<p><span>Rotate: </span>'W'</p>
+					<p><span>Pause: </span>'P'</p>
+					<p><spam>Server Version: 3.5.2</spam></p>
+				</div>
+				<!-- HTML -->
+<audio id="MyAudioElement" loop>
+	<source src="./media/tetis.wav" type="audio/wav">
+	<source src="./media/tetis.mp3" type="audio/mp3">
+	Your browser does not support the audio element.
+  </audio>
+				<p></p>
+				<h1 class="hidden"></h1>
+				<div class="quitButtonContainer">
+					<a class="quitButton" href="/">Quit</a>
+				</div>
+			</div>
+			<div id="localContainer" class="mainGame"></div>
+			<div id="chatBox">
+			</div>
+		</div>
+
+	<template id="player-template">
+		<div class="player game">
+			<canvas class="gameCanvas"></canvas>
+		</div>
+	</template>
+	<script src="https://tetris.snaildos.com/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="utilities/utilities.js"></script>
+	<script type="text/javascript" src="components/ConnectionManager.js"></script>
+	<script type="text/javascript" src="components/EventHandler.js"></script>
+	<script type="text/javascript" src="components/Piece.js"></script>
+	<script type="text/javascript" src="components/Board.js"></script>
+	<script type="text/javascript" src="components/Player.js"></script>
+	<script type="text/javascript" src="components/Game.js"></script>
+	<script type="text/javascript" src="components/Manager.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
