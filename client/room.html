@@ -48,10 +48,24 @@ document.getElementById('MyAudioElement').play()
 						  
 						  });
 						  })(jQuery);
-						  </script>
+						</script>
 	<div class="flex-container-rows">
 		<div id="flex-container-localRow">
 			<div class="textBox-left">
+				<div class="logoFlexBox">
+					<img class="tetrisLogo" src="media/logo.png">
+				</div>
+				<div class="controls">
+					<h2>Controls</h2>
+					<p><span>Left: </span>'A'</p>
+					<p><span>Right: </span>'D'</p>
+					<p><span>Down: </span>'S'</p>
+					<p><span>Drop: </span>'Space bar'</p>
+					<p><span>Clock: </span>'E'</p>
+					<p><span>Rotate: </span>'W'</p>
+					<p><span>Pause: </span>'P'</p>
+					<p><spam>Server Version: 3.5.2</spam></p>
+				</div>
 				<!-- HTML -->
 <audio id="MyAudioElement" loop>
 	<source src="./media/tetis.wav" type="audio/wav">
@@ -61,10 +75,13 @@ document.getElementById('MyAudioElement').play()
 				<p></p>
 				<h1 class="hidden"></h1>
 				<div class="quitButtonContainer">
-					<a class="quitButton" href="index.html">Quit</a>
+					<a class="quitButton" href="/">Quit</a>
 				</div>
 			</div>
 			<div id="localContainer" class="mainGame"></div>
+			<div id="chatBox">
+				<iframe src="https://snailchat-app.herokuapp.com/tetris.html" title="Chat" width="100%" height="97%" style="border:none;"></iframe>
+			</div>
 		</div>
 		<div id="flex-container-remoteRow">
 			<div id="remoteContainer" class="remoteGames"></div>
@@ -76,7 +93,7 @@ document.getElementById('MyAudioElement').play()
 			<canvas class="gameCanvas"></canvas>
 		</div>
 	</template>
-	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://tetris.snaildos.com/socket.io/socket.io.js"></script>
 	<script type="text/javascript" src="utilities/utilities.js"></script>
 	<script type="text/javascript" src="components/ConnectionManager.js"></script>
 	<script type="text/javascript" src="components/EventHandler.js"></script>
