@@ -45,7 +45,7 @@ span {
 	align-items: center;
 	justify-content: flex-start;
 	/*flex-grow: 2;*/
-	color: rgb(255, 255, 255);
+	color: white !important;
 	font-size: 1.3rem;
 }
 
