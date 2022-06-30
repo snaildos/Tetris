@@ -12,7 +12,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdn.snaildos.com/w3.css">
 		<link rel="stylesheet" href="index.css">
 		<script>
 		function single()  {
@@ -26,7 +26,7 @@
 			(function($){
 		  $(document).ready(function() {
 		  
-		  var consent = localStorage.getItem('cookie-consent');
+		  var consent = localStorage.getItem('welcome');
 		  
 		  if(consent != 'true'){
 			$('#cookie').fadeIn();
@@ -34,7 +34,7 @@
 
 		  
 		  $('#cookie-ok').click(function(event){
-			localStorage.setItem('cookie-consent', 'true');
+			localStorage.setItem('welcome', 'true');
 			$('#cookie').fadeOut();
 			localStorage.setItem('music', 'false');
 		  });
@@ -44,7 +44,7 @@
 		  </script>
 		  <script>
 			  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-alert("You are trying to connect to a service that only works on PC. Pressing OK will ignore this message, As a developer, I advice you not to try to play this game on your phone.")
+alert("You are trying to connect to a service that only works on PC. Pressing OK will ignore this message. Please try to not play this game on your phone.")
 }
 		  </script>
 	</head>
@@ -64,10 +64,12 @@ alert("You are trying to connect to a service that only works on PC. Pressing OK
 			<p class="white">Server Version is currently: 0.3</p>
 
 		<div id="cookie">
-			<div id="cookie-wrapper">
-			  <div id="cookie-content" class="h1">Welcome to Tetris! <p>There is a settings button after starting the game, you can enable music, addons and more.</p>Hit START to start playing!</div>
-				<button id="cookie-ok"><h1>Start!</h1></button>
-			</div>
+			<div id="cookie-wrapper w3-center">
+			<div id="cookie-content" class="h1 w3-center">Welcome to Tetris! <p>There is a settings button after starting the game, you can enable music, addons and more.</p>Hit START to start playing!
+			<br></br>
+			<button id="cookie-ok" class="w3-btn w3-white w3-round w3-center"><h1>Start!</h1></button>	
+		</div>
+		</div>
 		</div>
 
 		<script>
@@ -123,7 +125,7 @@ alert("You are trying to connect to a service that only works on PC. Pressing OK
 					}
 				} else {
 					//create single div showing no rooms available
-					content=`<div class='roomContainer'>No generated servers found, please, create one.</div><button class="w3-button w3-center w3-white" onclick="single()">Single Player</button>`
+					content=`<div class=' w3-center'><p class="roomContainer">No generated servers found, please, create one.</p><br><button class="w3-button w3-center w3-white w3-round" onclick="single()">Single Player</button><br><a href="/room" class="w3-button w3-center w3-white w3-round">Create a server!</a></div>`
 				}
 				menuContainer.innerHTML = content;
 			}
